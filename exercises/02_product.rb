@@ -11,6 +11,8 @@ def product(numbers)
   return result
 end
 
+# result = numbers.inject(:*)
+
 # ------ code above this line ------
 
 require 'rspec/autorun'
