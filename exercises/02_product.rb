@@ -1,4 +1,14 @@
 def product(numbers)
+  if numbers.empty?
+    result = nil
+    return result
+  else
+    result = 1
+  end
+  numbers.each do |num|
+    result *= num
+  end
+  return result
 end
 
 # ------ code above this line ------
