@@ -1,4 +1,31 @@
-
+def group_by(array, key)
+  if array == []
+    return {}
+  else
+    result = {}
+    key_record = []
+    if key == :x
+      index = 0
+    elsif key == :y
+      index = 1
+    else
+      return result
+    end
+    array.each do |hash|
+      if hash.keys[index] == key
+        if !(key_record.include?(hash.values[index]))
+          key_record << hash.values[index]
+          result[hash.values[index]] = [hash]
+        else
+          result[hash.values[index]] << hash
+        end
+      else
+        return {nil => array}
+      end
+    end
+    return result
+  end
+end
 # ------ code above this line ------
 
 require 'rspec/autorun'
