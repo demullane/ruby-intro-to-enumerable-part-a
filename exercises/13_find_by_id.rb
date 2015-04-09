@@ -1,11 +1,11 @@
-def find_by_id(array,key)
+def find_by_id(array,value)
   if array == []
     return nil
   else
     counter = false
     array.each do |hash|
       hash.each do |k,v|
-        if v == key
+        if v == value
           counter = true
         end
       end

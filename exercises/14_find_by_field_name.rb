@@ -1,4 +1,21 @@
-
+def find_by_field_name(array,key,value)
+  if array == []
+    return nil
+  else
+    counter = false
+    array.each do |hash|
+      hash.each do |k,v|
+        if k == key && v == value
+          counter = true
+        end
+      end
+      if counter == true
+        return hash
+      end
+    end
+    return nil
+  end
+end
 # ------ code above this line ------
 
 require 'rspec/autorun'
