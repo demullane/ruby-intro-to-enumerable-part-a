@@ -1,4 +1,6 @@
-
+def reduce(words)
+  words.join("")
+end
 # ------ code above this line ------
 
 require 'rspec/autorun'
