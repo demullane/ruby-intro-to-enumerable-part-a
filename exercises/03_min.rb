@@ -1,4 +1,15 @@
 def min(numbers)
+  if numbers.empty?
+    return nil
+  else
+    lowest_num = numbers.first
+    numbers.each do |num|
+      if num < lowest_num
+        lowest_num = num
+      end
+    end
+    return lowest_num
+  end
 end
 
 # ------ code above this line ------
